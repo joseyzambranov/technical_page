@@ -1,0 +1,159 @@
+/*-----------------------font---------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/*-------------------------variable css-------------------------------*/
+:root{
+    /*------------------------------color----------------------------------*/
+    --hue-color:140;
+    --first-color:hsl(var(--hue-color),69%,61%);
+    --first-color-alt:hsl(var(--hue-color),47%,43%);
+    --title-color:hsl(var(--hue-color),15%,30%);
+    --text-color:hsl(var(--hue-color),9%,25%);
+    --body-color:hsl(var(--hue-color),6%,85);
+    --container-color:hsl(var(--hue-color),6%,76%);
+
+    /*--------------------------------font weigth------------------------------------------*/
+
+    --font-regular:400;
+    --font-medium:500;
+    --font-semi-bold:600;
+
+    /*----------------------margin-----------------*/
+    --mb-1:.5rem;
+    --mb-2:1rem;
+    --mb-3:1.5rem;
+    --mb-4:2rem;
+    --mb-5:2.5rem;
+    --mb-6:3rem;
+    /*---------------------font size---------------------*/
+    --big-font-size:2rem;
+    --h1-font-size:1.5rem;
+    --h2-font-size:1.25rem;
+    --h3-font-size:1.125rem;
+    --normal-font-size:.938rem;
+    --small-font-size:.813rem;
+    --smaller-font-size:75rem;
+}   /*---------------------base-------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    min-width: 290px;
+    background: var(--body-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-regular);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+a{
+    
+    text-decoration: none;
+    color: var(--first-color-alt);
+}
+a:hover{
+    color: var(--first-color);
+}
+/*------------------------------style freecodecamp----------------------------------*/
+#navbar{
+    position: fixed;
+    min-width: 290px;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    border-right: solid var(--text-color);
+}
+header{
+    color: var(--title-color);
+    margin-top: var(--mb-1);
+    margin-bottom: var(--mb-1);
+    text-align: center;
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
+}
+#main-doc header{
+    text-align: left;
+    margin-bottom: var(--mb-2);
+}
+#navbar ul{
+    height: 90%;
+    padding: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#navbar li{
+    border-top: 1px solid var(--text-color);
+    position: relative;
+    width: 100%;
+    
+}
+#navbar a{
+    display: block;
+    padding: var(--mb-1) var(--mb-2);
+}
+
+#main-doc{
+    position: absolute;
+    margin-left: 310px;
+    padding:var(--mb-3);
+}
+section article{
+    margin: var(--mb-1);
+}
+section li{
+    margin: var(--mb-1) 0 0 var(--mb-5);
+}
+code{
+    display: block;
+    text-align: left;
+   
+    position: relative;
+    word-break: break-word;
+    word-wrap: wrap;
+    line-height: 2;
+    background-color: var(--container-color);
+    padding: var(--mb-2);
+    margin: var(--mb-1);
+    border-radius: .5rem;
+}
+@media only screen and (max-width:815px){
+
+    #navbar ul{
+        border: 1px solid var(--text-color);
+        height: 207px;
+    }
+    #navbar{
+        background-color: white;
+        position: absolute;
+        top:0;
+        margin: 0;
+        padding:0;
+        width:100%;
+        max-height: 275px;
+        border: none;
+        z-index: 1;
+        
+    }
+    #main-doc{
+        position: relative;
+        margin-left: 0;
+        margin-top: 270px;
+    }
+}
+@media only screen and (max-width:400px){
+    #main-doc{
+        margin-left: -10px;
+    }
+    code{
+        
+        width: 100%;
+        
+    min-width: 233px;
+    }
+}
